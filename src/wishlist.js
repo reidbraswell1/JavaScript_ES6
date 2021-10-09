@@ -8,7 +8,7 @@ class wishlist {
     }
     add(car) {
         this.list.push(car);
-        displayWishList(car);
+        displayWishList(this.list, car);
     }
     remove(idx,car) {
 
