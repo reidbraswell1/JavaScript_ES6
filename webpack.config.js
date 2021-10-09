@@ -13,7 +13,18 @@ const config = {
         path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
+        // Add your plugins here
+        // Learn more about plugins from https://webpack.js.org/configuration/plugins/
         new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+              { from: "styles", to: "styles" },
+              { from: "index.html", to: "" },
+              { from: "package.json", to: "" },
+              { from: "webpack.config.js", to: "" }
+            ],
+          }),
+      
         // Add your plugins here
         // Learn more about plugins from https://webpack.js.org/configuration/plugins/
     ],
