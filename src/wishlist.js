@@ -1,13 +1,14 @@
-class wishlist {
-    list = [];
+import { displayWishList } from './tools.js';
 
-    constructor(car) {
+class wishlist {
+    constructor(list) {
         console.log("---Begin wishlist constructor---");
-        console.log(`Constructor Parameters:\n1. ${car.make}\n2. ${car.model}\n3. ${car.year}`);
-        this.car = car;
+        console.log(`Constructor Parameters:\n1. ${list}`);
+        this.list = list;
     }
     add(car) {
         this.list.push(car);
+        displayWishList(car);
     }
     remove(idx,car) {
 
