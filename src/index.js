@@ -4,4 +4,5 @@ import { wishlist } from "./wishlist";
 
 let myCar = new car("myMake", "myModel", "myYear");
 myCar.info();
-let myWishlist = new wishlist(myCar);
+let myWishlist = new wishlist([]);
+myWishlist.add(myCar);
