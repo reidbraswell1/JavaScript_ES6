@@ -6,6 +6,9 @@ let myCar = new car("myMake", "myModel", "myYear");
 myCar.info();
 let myWishlist = new wishlist([]);
 myWishlist.add(myCar);
+let myCar2 = new car("myMake2", "myModel2", "myYear2");
+myCar2.info();
+myWishlist.add(myCar2);
 
 export function deleteRow() {
     console.log("---Begin Delete Row---")
