@@ -12,7 +12,7 @@ export function displayWishList(wishList, obj) {
   const tdYear = document.createElement("td");
   const tdUpdate = document.createElement("td");
   const tdDelete = document.createElement("td");
-  tdId.innerText = wishList.length;
+  tdId.innerText = `${wishList.length}.`;
   tdMake.innerText = obj.make;
   tdModel.innerText = obj.model;
   tdYear.innerText = obj.year;
