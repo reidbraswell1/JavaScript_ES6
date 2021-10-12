@@ -18,6 +18,45 @@ body {
   text-align: center;
   height: 100%;
 }
+/*
+#form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-star;
+    text-align: center;
+    border: 1px solid black;
+}
+*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+#wishlist-add-form {
+    border: 1px solid black;
+}
+ 
+.label {
+    display: block;
+    align-self: flex-start;
+    margin-left: 27%;
+    margin-bottom: .5rem;
+}
+
+.input {
+    align-self: flex-start;
+    width: 45%;
+    margin-left: 27%;
+    margin-bottom: .5rem;
+}
+
+#button-container {
+  margin-bottom: 1rem;
+}
+
+.button {
+  width: 20%;
+}
 
 #table-container {
   display: flex;
