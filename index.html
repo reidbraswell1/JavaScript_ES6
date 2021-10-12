@@ -17,6 +17,23 @@
     <main id="main">
       <div id="container">
         <h1>JavaScript ECMA6 ES6 Assignment</h1>
+        <div id="form-container">
+          <h3>Wishlist Add</h3>
+          <form id="wishlist-add-form" action="">
+            <h3>Wishlist Add</h3>
+            <label for="make" class="label">Make</label>
+            <input id="make" class="input" name="make" type="text" />
+            <label for="model" class="label">Model</label>
+            <input id="model" class="input" name="model" type="text" />
+            <label for="year" class="label">Year</label>
+            <input id="year" name="year" class="input" type="number" min="1929" max="2050"
+            />
+            <div id="button-container">
+              <button id="submit-add" name="submit-add" class="button">Submit</button>
+              <button id="reset-add" name="reset-add" class="button">Reset</button>
+            </div>
+          </form>
+        </div>
         <div id="table-container">
           <table id="wishlist-table">
             <caption>
