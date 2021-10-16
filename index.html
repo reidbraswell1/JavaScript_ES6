@@ -18,7 +18,7 @@
       <div id="container">
         <h1>JavaScript ECMA6 ES6 Assignment</h1>
         <div id="form-container">
-          <form id="wishlist-add-form" action="">
+          <form id="wishlist-add-form" action="javascript:controller(this)">
             <h3>Wishlist <span id="add-or-modify">Add</span></h3>
             <label for="make" class="label">Make</label>
             <input id="make" class="input" name="make" type="text" required />
@@ -26,6 +26,8 @@
             <input id="model" class="input" name="model" type="text" required />
             <label for="year" class="label">Year</label>
             <input id="year" name="year" class="input" type="number" min="1929" max="2050" required />
+            <label id="id-label" for="id" class="label hidden">Id</label>
+            <input id="id" class="input hidden" name="id" type="text" readonly="true">
             <div id="button-container">
               <button id="submit-add" name="submit-add" class="button" type="submit">Submit</button>
               <button id="reset-add" name="reset-add" class="button" type="reset">Reset</button>
@@ -37,7 +39,7 @@
             <caption>
               Wishlist
             </caption>
-            <thead id="wishlist-thead"></thead>
+            <thead id="wishlist-thead">
             <tr>
               <th>Id</th>
               <th>Make</th>
@@ -46,11 +48,12 @@
               <th>Update</th>
               <th>Delete</th>
             </tr>
+            </thead>
             <tbody id="wishlist-tbody"></tbody>
           </table>
         </div>
       </div>
     </main>
-    <script src="dist/main.js" type="application/x-javascript"></script>
+    <script src="main.js" type="application/x-javascript"></script>
   </body>
 </html>
