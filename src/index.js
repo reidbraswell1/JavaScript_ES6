@@ -2,13 +2,22 @@ console.log("---Begin index.js---");
 import { car } from "./car.js";
 import { wishlist } from "./wishlist";
 
-let myCar = new car("myMake", "myModel", "myYear");
-myCar.info();
+// Test Data
 let myWishlist = new wishlist([]);
-myWishlist.add(myCar);
-let myCar2 = new car("myMake2", "myModel2", "myYear2");
-myCar2.info();
-myWishlist.add(myCar2);
+for (let i=0; i < 300; i++) {
+    let myCar;
+    if(i < 10) {
+        myCar = new car(`myMake${i+1}`, `myModel${i+1}`, `myYear200${i+1}`);
+    }
+    else if(i+1 > 99) {
+        myCar = new car(`myMake${i+1}`, `myModel${i+1}`, `myYear2${i+1}`);
+    }
+    else {
+        myCar = new car(`myMake${i+1}`, `myModel${i+1}`, `myYear20${i+1}`);
+    }
+    myCar.info();
+    myWishlist.add(myCar);
+}
 
 export function deleteRow() {
     console.log("---Begin Delete Row---")
