@@ -1,7 +1,7 @@
 import { updateRow } from './index.js';
 import { displayWishList } from './tools.js';
 
-class wishlist {
+export class Wishlist {
     constructor(list) {
         console.log("---Begin wishlist constructor---");
         console.log(`Constructor Parameters:\n1. ${list}`);
@@ -15,10 +15,11 @@ class wishlist {
     remove(idx) {
         console.log("---Begin wishList.remove()---");
         console.log(`Parameters: Idx:${idx}`);
+        delete this.list[idx];
     }
-    update(idx) {
-        console.log("---Begin wishList.update()---");
-        console.log(`Parameters: Idx:${idx}`);
+    update(idx,make,model,year) {
+        console.log("---Begin WishList.update()---");
+        console.log(`Parameters: Idx:${idx}\nmake=${make}\nmodel=${model}\nyear=${year}`);
+        console.log("---End Wishlist.update()---");
     }
 }
-export { wishlist };
