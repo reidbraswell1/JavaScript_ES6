@@ -1,9 +1,9 @@
 console.log("---Begin index.js---");
 import { car } from "./car.js";
-import { wishlist } from "./wishlist";
+import { Wishlist } from "./wishlist";
 
 // Test Data
-let myWishlist = new wishlist([]);
+export let myWishlist = new Wishlist([]);
 for (let i=0; i < 300; i++) {
     let myCar;
     if(i < 10) {
@@ -19,23 +19,7 @@ for (let i=0; i < 300; i++) {
     myWishlist.add(myCar);
 }
 
-export function deleteRow() {
-    console.log("---Begin Delete Row---")
-    const stringArray = this.id.split("-");
-    const id = stringArray[stringArray.length - 1];
-    alert(`${this.id}, ${id}, ${this.innerText}`);
-    document.getElementById(`wishlist-row-${id}`).remove();
-    myWishlist.remove(id);
-}
-
-export function updateRow() {
-    console.log("---Begin Update Row---")
-    const stringArray = this.id.split("-");
-    const id = stringArray[stringArray.length - 1];
-    alert(`${this.id}, ${id}, ${this.innerText}`);
-    myWishlist.update(id);
-    /*
-    document.getElementById(`wishlist-row-${id}`).remove();
-    myWishlist.remove(id);
-    */
+export function controller(make, model, year) {
+    console.log("---Begin controller()---");
+    console.log("---End controller()---");
 }
