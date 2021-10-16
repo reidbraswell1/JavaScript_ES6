@@ -1,6 +1,7 @@
-import { deleteRow } from './index.js';
-import { updateRow } from './index.js';
-import { wishlist } from './wishlist';
+//import { deleteRow } from './index.js';
+//import { updateRow } from './index.js';
+import { Wishlist } from './wishlist';
+import { myWishlist } from './index.js';
 
 export function displayWishList(wishList, obj) {
   console.log("---Begin displayWishList()---");
@@ -18,7 +19,7 @@ export function displayWishList(wishList, obj) {
   tdYear.innerText = obj.year;
   tdUpdate.innerHTML="<button id=" + `wishlist-update-${wishList.length - 1}` + ">Update</button>";
   tdDelete.innerHTML="<button id=" + `wishlist-delete-${wishList.length - 1}` + ">Delete</button>";
-  tr.id = `wishlist-row-${wishlist.length - 1}`;
+  tr.id = `wishlist-row-${wishList.length - 1}`;
   tr.appendChild(tdId);
   tr.appendChild(tdMake);
   tr.appendChild(tdModel);
@@ -31,4 +32,36 @@ export function displayWishList(wishList, obj) {
   const tdDeleteButton = document.getElementById(`wishlist-delete-${wishList.length - 1}`);
   tdDeleteButton.addEventListener('click',deleteRow);
   console.log("---End displayWishList()---");
+}
+
+function updateRow() {
+  console.log("---Begin Update Row---")
+  const stringArray = this.id.split("-");
+  const id = stringArray[stringArray.length - 1];
+  console.log(`this.id=${this.id}\nid=${id}\nthis.innerText=${this.innerText}`);
+  let addOrModify = document.getElementById("add-or-modify");
+  let idLabel = document.getElementById("id-label");
+  let idInput = document.getElementById("id");
+  idLabel.style.display="block";
+  idInput.style.display="inline";
+  idInput.value=id;
+  addOrModify.innerText="Modify";
+  let make = document.getElementById("make").value;
+  let model = document.getElementById("model").value;
+  let year = document.getElementById("year").value;
+  myWishlist.update(id,make,model,year);
+  console.log("---End Update Row---");
+  
+}
+
+function deleteRow() {
+  console.log("---Begin Delete Row---")
+  const stringArray = this.id.split("-");
+  const id = stringArray[stringArray.length - 1];
+  console.log(`this.id=${this.id}\nid=${id}\nthis.innerText=${this.innerText}`);
+  document.getElementById(`wishlist-row-${id}`).remove();
+  myWishlist.remove(id);
+  console.log("Array after delete:");
+  console.log(myWishlist.list);
+  console.log("---End Delete Row---");
 }
