@@ -4,6 +4,7 @@ import { Wishlist } from "./wishlist";
 
 // Test Data
 export let myWishlist = new Wishlist([]);
+/*
 for (let i=0; i < 300; i++) {
     let myCar;
     if(i < 10) {
@@ -18,6 +19,7 @@ for (let i=0; i < 300; i++) {
     myCar.info();
     myWishlist.add(myCar);
 }
+*/
 
 export function controller(obj) {
     console.log("---Begin controller()---");
