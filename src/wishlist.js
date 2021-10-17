@@ -20,6 +20,9 @@ export class Wishlist {
     update(idx,make,model,year) {
         console.log("---Begin WishList.update()---");
         console.log(`Parameters: Idx:${idx}\nmake=${make}\nmodel=${model}\nyear=${year}`);
+        this.list[idx].make = make;
+        this.list[idx].model = model;
+        this.list[idx].year = year;
         console.log("---End Wishlist.update()---");
     }
 }
