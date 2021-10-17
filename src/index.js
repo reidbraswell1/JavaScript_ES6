@@ -42,6 +42,8 @@ export function controller(obj) {
         tdModel.innerText = model;
         tdYear.innerText = year;
         addOrModify.innerText = "Add";
+        document.getElementById("id").style.display="none";
+        document.getElementById("id-label").style.display="none";
     }
     let form = document.getElementById("wishlist-add-form");
     form.reset();
