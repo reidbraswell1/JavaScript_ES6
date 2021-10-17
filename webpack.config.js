@@ -11,6 +11,9 @@ const config = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
+        filename: 'main.js',
+        libraryTarget: 'var',
+        library: 'mylib',
     },
     plugins: [
         // Add your plugins here
@@ -49,5 +52,6 @@ module.exports = () => {
     } else {
         config.mode = 'development';
     }
+    // require('index');
     return config;
 };
