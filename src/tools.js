@@ -17,6 +17,9 @@ export function displayWishList(wishList, obj) {
   tdMake.innerText = obj.make;
   tdModel.innerText = obj.model;
   tdYear.innerText = obj.year;
+  tdMake.id = `td-make-${wishList.length - 1}`;
+  tdModel.id = `td-model-${wishList.length - 1}`;
+  tdYear.id = `td-year-${wishList.length - 1}`;
   tdUpdate.innerHTML="<button id=" + `wishlist-update-${wishList.length - 1}` + ">Update</button>";
   tdDelete.innerHTML="<button id=" + `wishlist-delete-${wishList.length - 1}` + ">Delete</button>";
   tr.id = `wishlist-row-${wishList.length - 1}`;
@@ -46,10 +49,9 @@ function updateRow() {
   idInput.style.display="inline";
   idInput.value=id;
   addOrModify.innerText="Modify";
-  let make = document.getElementById("make").value;
-  let model = document.getElementById("model").value;
-  let year = document.getElementById("year").value;
-  myWishlist.update(id,make,model,year);
+  let make = document.getElementById("make").value = myWishlist.list[id].make;
+  let model = document.getElementById("model").value = myWishlist.list[id].model;
+  let year = document.getElementById("year").value = myWishlist.list[id].year;
   console.log("---End Update Row---");
   
 }
