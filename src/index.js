@@ -1,11 +1,10 @@
 console.log("---Begin index.js---");
 import { Car } from "./car.js";
-import { Wishlist } from "./wishlist";
 import { generateTestData } from "./test.js";
 
 // Test Data
 let testDataCount = 0;
-//export let myWishlist = new Wishlist([]);
+
 export let myWishlist = generateTestData(testDataCount);
 
 /* 
@@ -44,6 +43,11 @@ export function controller(obj) {
     console.log("---End controller()---");
 }
 
+/*
+    Called by onsubmit attribute of HTML form. Since all fields
+    are required there is no validation to be done at this time.
+    Stubbed in for future use.
+*/
 export function validator(obj) {
     console.log("---Begin validator()---");
     const validationFlag = true;
