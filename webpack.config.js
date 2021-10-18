@@ -52,6 +52,5 @@ module.exports = () => {
     } else {
         config.mode = 'development';
     }
-    // require('index');
     return config;
 };
