@@ -1,9 +1,12 @@
 console.log("---Begin index.js---");
 import { car } from "./car.js";
 import { Wishlist } from "./wishlist";
+import { generateTestData } from "./test.js";
 
 // Test Data
-export let myWishlist = new Wishlist([]);
+let testDataCount = 0;
+//export let myWishlist = new Wishlist([]);
+export let myWishlist = generateTestData(testDataCount);
 
 export function controller(obj) {
     console.log("---Begin controller()---");
