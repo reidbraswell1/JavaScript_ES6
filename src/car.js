@@ -1,4 +1,4 @@
-class car {
+class Car {
     constructor (make, model, year) {
         console.log("---Begin car constructor---");
         console.log(`Constructor Parameters:\n1. make=${make}\n2. model=${model}\n3. year=${year} `)
@@ -11,4 +11,4 @@ class car {
         console.log(`Parameters:\n1. make=${this.make}\n2. model=${this.model} \n3. year=${this.year}`);
     }
 }
-export { car };
+export { Car };

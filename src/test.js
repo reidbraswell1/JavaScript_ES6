@@ -1,4 +1,4 @@
-import { car } from './car.js';
+import { Car } from './car.js';
 import { Wishlist } from './wishlist';
 
 export function generateTestData(count) {
@@ -6,13 +6,13 @@ export function generateTestData(count) {
     for (let i=0; i < count; i++) {
         let myCar;
         if(i < 10) {
-            myCar = new car(`make${i+1}`, `model${i+1}`, `year200${i+1}`);
+            myCar = new Car(`make${i+1}`, `model${i+1}`, `year200${i+1}`);
         }
         else if(i+1 > 99) {
-            myCar = new car(`make${i+1}`, `model${i+1}`, `year2${i+1}`);
+            myCar = new Car(`make${i+1}`, `model${i+1}`, `year2${i+1}`);
         }
         else {
-            myCar = new car(`make${i+1}`, `model${i+1}`, `year20${i+1}`);
+            myCar = new Car(`make${i+1}`, `model${i+1}`, `year20${i+1}`);
         }
         myCar.info();
         myWishlist.add(myCar);
