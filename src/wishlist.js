@@ -1,5 +1,6 @@
-import { updateRow } from './index.js';
-import { displayWishList } from './tools.js';
+import { updateRow } from './tools.js';
+//import { displayWishList } from './tools.js';
+import { deleteRow } from './tools.js'
 
 export class Wishlist {
     constructor(list) {
@@ -10,7 +11,19 @@ export class Wishlist {
     add(car) {
         console.log("---Begin add()--");
         this.list.push(car);
-        displayWishList(this.list, car);
+        //displayWishList(this.list, car);
+        console.log("---End add()---");
+    }
+    display(car) {
+        console.log("---Begin display()---");
+        // Populate the table cells with the car info
+        car.info(this.list);
+        // Create an event listener for update and delete events
+        const tdUpdateButton = document.getElementById(`wishlist-update-${this.list.length - 1}`);
+        tdUpdateButton.addEventListener('click',updateRow);
+        const tdDeleteButton = document.getElementById(`wishlist-delete-${this.list.length - 1}`);
+        tdDeleteButton.addEventListener('click',deleteRow);
+        console.log("---End display()---");
     }
     remove(idx) {
         console.log("---Begin wishList.remove()---");
