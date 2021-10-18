@@ -1,18 +1,9 @@
 import { myWishlist } from './index.js';
 
-export function displayWishList(wishList, car) {
-  console.log("---Begin displayWishList()---");
-  // Populate the table cells with the car info
-  car.info(wishList);
-  // Create an event listener for update and delete events
-  const tdUpdateButton = document.getElementById(`wishlist-update-${wishList.length - 1}`);
-  tdUpdateButton.addEventListener('click',updateRow);
-  const tdDeleteButton = document.getElementById(`wishlist-delete-${wishList.length - 1}`);
-  tdDeleteButton.addEventListener('click',deleteRow);
-  console.log("---End displayWishList()---");
-}
-
-function updateRow() {
+/*
+  Callback function called when a click event occurs on the update button
+*/
+export function updateRow() {
   console.log("---Begin Update Row---")
   const stringArray = this.id.split("-");
   const id = stringArray[stringArray.length - 1];
@@ -28,10 +19,12 @@ function updateRow() {
   let model = document.getElementById("model").value = myWishlist.list[id].model;
   let year = document.getElementById("year").value = myWishlist.list[id].year;
   console.log("---End Update Row---");
-  
-}
+  }
 
-function deleteRow() {
+/*
+  Callback function called when a click event occurs on the update button
+*/
+export function deleteRow() {
   console.log("---Begin Delete Row---")
   const stringArray = this.id.split("-");
   const id = stringArray[stringArray.length - 1];
