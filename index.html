@@ -18,7 +18,7 @@
       <div id="container">
         <h1>JavaScript ECMA6 ES6 Assignment</h1>
         <div id="form-container">
-          <form id="wishlist-add-form" action="javascript:mylib.controller(this)">
+          <form id="wishlist-add-form" action="javascript:mylib.controller(this)" onsubmit="return mylib.validator(this)">
             <h3>Wishlist <span id="add-or-modify">Add</span></h3>
             <label for="make" class="label">Make</label>
             <input id="make" class="input" name="make" type="text" required />
