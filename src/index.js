@@ -23,6 +23,7 @@ export function controller(obj) {
     if(addOrModify.innerText == "Add") {
         let myCar = new Car(make,model,year);
         myWishlist.add(myCar);
+        myWishlist.display(myCar);
     }
     if(addOrModify.innerText == "Modify") {
         myWishlist.update(id,make,model,year);
