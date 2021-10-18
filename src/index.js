@@ -1,5 +1,5 @@
 console.log("---Begin index.js---");
-import { car } from "./car.js";
+import { Car } from "./car.js";
 import { Wishlist } from "./wishlist";
 import { generateTestData } from "./test.js";
 
@@ -8,6 +8,11 @@ let testDataCount = 0;
 //export let myWishlist = new Wishlist([]);
 export let myWishlist = generateTestData(testDataCount);
 
+/* 
+   Action called by HTML form. If the addOrModify span tag's text is Add then
+   a car is added to the wish list, If Update then the existing item on the 
+   wishlist is updated.
+*/
 export function controller(obj) {
     console.log("---Begin controller()---");
     console.log(`make=${obj.make.value}\nmodel=${obj.model.value}\nyear=${obj.year.value}`);
@@ -17,7 +22,7 @@ export function controller(obj) {
     let id = obj.id.value;
     let addOrModify = document.getElementById("add-or-modify");
     if(addOrModify.innerText == "Add") {
-        let myCar = new car(make,model,year);
+        let myCar = new Car(make,model,year);
         myWishlist.add(myCar);
     }
     if(addOrModify.innerText == "Modify") {
@@ -37,4 +42,13 @@ export function controller(obj) {
     console.log("myWishlist:");
     console.log(myWishlist.list);
     console.log("---End controller()---");
+}
+
+export function validator(obj) {
+    console.log("---Begin validator()---");
+    const validationFlag = true;
+    // No validation since HTML5 validation is being used all fields are required
+    console.log(`make=${obj.make.value}\nmodel=${obj.model.value}\nyear=${obj.year.value}`);
+    console.log("---End validator()---");
+    return validationFlag;
 }
