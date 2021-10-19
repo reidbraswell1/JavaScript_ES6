@@ -80,6 +80,13 @@ form {
   border-collapse: collapse;
 }
 
+#table-caption {
+  caption-side: top;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
 #wishlist-table td,
 th {
   border: 1px solid #ddd;
