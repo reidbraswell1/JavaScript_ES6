@@ -20,8 +20,10 @@ export class Wishlist {
         car.info(this.list);
         // Create an event listener for update and delete events
         const tdUpdateButton = document.getElementById(`wishlist-update-${this.list.length - 1}`);
+        tdUpdateButton.classList="btn btn-success";
         tdUpdateButton.addEventListener('click',updateRow);
         const tdDeleteButton = document.getElementById(`wishlist-delete-${this.list.length - 1}`);
+        tdDeleteButton.classList="btn btn-danger";
         tdDeleteButton.addEventListener('click',deleteRow);
         console.log("---End display()---");
     }
