@@ -1,5 +1,6 @@
 console.log("---Begin index.js---");
 import { Car } from "./car.js";
+import { Wishlist } from "./wishlist.js";
 import { generateTestData } from "./test.js";
 
 // Test Data
