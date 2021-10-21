@@ -14,8 +14,8 @@ export function generateTestData(count) {
         else {
             myCar = new Car(`make${i+1}`, `model${i+1}`, `year20${i+1}`);
         }
-        myCar.info();
         myWishlist.add(myCar);
+        myWishlist.display(myCar);
     }
     return myWishlist;
 }
