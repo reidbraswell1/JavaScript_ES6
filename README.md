@@ -40,3 +40,11 @@
 - Import our Car and WishList modules
 - Create a new instance of our WishList
 - Users should be able to interact with our web page (DOM) to add new Car instances to their Wish List
+
+**<span style="text-decoration: underline; color: red">Running and Creating the Distributable:</span>**
+
+1. Run `npm install` after cloning the project.
+1. Run `npm run build:dev` to create a ditributable.
+1. Unzip the zipped file with a directory name once you have copied it out of the project. For example: `unzip dist.zip -d MyApp`
+1. Switch to the newly created directory and run `npm install` to install all of the dependencies for the project.
+1. Right click on the index.html file and open with a browser.
