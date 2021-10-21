@@ -33,5 +33,18 @@ export function deleteRow() {
   myWishlist.remove(id);
   console.log("Array after delete:");
   console.log(myWishlist.list);
+  let messageInfo = document.getElementById("message-info");
+  let wishListIsEmpty = true;
+  for(let i=0; i < myWishlist.list.length; i++) {
+    console.log(typeof(myWishlist.list[i]));
+    if(typeof(myWishlist.list[i]) != "undefined") {
+      console.log("here");
+      wishListIsEmpty = false;
+      break;
+    }
+  }
+  if(wishListIsEmpty) {
+      messageInfo.style.display="block";
+  }
   console.log("---End Delete Row---");
 }
