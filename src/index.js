@@ -6,7 +6,10 @@ import { generateTestData } from "./test.js";
 let testDataCount = 0;
 
 export let myWishlist = generateTestData(testDataCount);
-
+let messageInfo = document.getElementById("message-info");
+if(myWishlist.list.length == 0) {
+    messageInfo.style.display="block";
+}
 /* 
    Action called by HTML form. If the addOrModify span tag's text is Add then
    a car is added to the wish list, If Update then the existing item on the 
