@@ -16,6 +16,8 @@ export class Wishlist {
     }
     display(car) {
         console.log("---Begin display()---");
+        let messageInfo = document.getElementById("message-info");
+        messageInfo.style.display="none";
         // Populate the table cells with the car info
         car.info(this.list);
         // Create an event listener for update and delete events
