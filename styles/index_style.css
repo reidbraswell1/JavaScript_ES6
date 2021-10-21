@@ -70,6 +70,22 @@ form {
   width: 23%;
 }
 
+#button-submit {
+  margin-right: .5rem;
+}
+
+#button-reset {
+  margin-left: .5rem;
+}
+
+#message-info {
+  display: none;
+  margin-top: .5rem;
+  text-align: center;
+  color: blue;
+  font-weight: bold;
+}
+
 #table-container {
   display: flex;
   justify-content: center;
