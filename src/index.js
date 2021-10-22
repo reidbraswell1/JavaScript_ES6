@@ -22,7 +22,7 @@ export function controller(obj) {
     let make = obj.make.value;
     let model = obj.model.value;
     let year = obj.year.value;
-    let id = obj.id.value;
+    let id = obj.id.value*1-1;
     let addOrModify = document.getElementById("add-or-modify");
     if(addOrModify.innerText == "Add") {
         let myCar = new Car(make,model,year);
