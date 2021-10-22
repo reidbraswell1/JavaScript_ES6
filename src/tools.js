@@ -13,7 +13,7 @@ export function updateRow() {
   let idInput = document.getElementById("id");
   idLabel.style.display="block";
   idInput.style.display="inline";
-  idInput.value=id;
+  idInput.value=id*1+1;
   addOrModify.innerText="Modify";
   let make = document.getElementById("make").value = myWishlist.list[id].make;
   let model = document.getElementById("model").value = myWishlist.list[id].model;
