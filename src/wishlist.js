@@ -9,12 +9,14 @@ export class Wishlist {
         console.log(`Constructor Parameters:\n1. ${list}`);
         this.list = list;
     }
+    // Adds item to wishlist
     add(car) {
         console.log("---Begin add()--");
         this.list.push(car);
         //displayWishList(this.list, car);
         console.log("---End add()---");
     }
+    // Displays last item added to wishlist
     display(car) {
         console.log("---Begin display()---");
         let messageInfo = document.getElementById("message-info");
@@ -30,11 +32,13 @@ export class Wishlist {
         tdDeleteButton.addEventListener('click',deleteRow);
         console.log("---End display()---");
     }
+    // Remove (marked as null or undefined) item pointed to by index
     remove(idx) {
         console.log("---Begin wishList.remove()---");
         console.log(`Parameters: Idx:${idx}`);
         delete this.list[idx];
     }
+    // Update item in wishlist
     update(idx,make,model,year) {
         console.log("---Begin WishList.update()---");
         console.log(`Parameters: Idx:${idx}\nmake=${make}\nmodel=${model}\nyear=${year}`);
