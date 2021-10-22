@@ -2,6 +2,7 @@ import { updateRow } from './tools.js';
 //import { displayWishList } from './tools.js';
 import { deleteRow } from './tools.js'
 
+// Wishlist Class
 export class Wishlist {
     constructor(list) {
         console.log("---Begin wishlist constructor---");
