@@ -1,6 +1,7 @@
 import { Car } from './car.js';
 import { Wishlist } from './wishlist';
 
+// Function to generate test data for the wishlist
 export function generateTestData(count) {
     let myWishlist = new Wishlist([]);
     for (let i=0; i < count; i++) {
