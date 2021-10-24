@@ -38,7 +38,6 @@ export function deleteRow() {
   for(let i=0; i < myWishlist.list.length; i++) {
     console.log(typeof(myWishlist.list[i]));
     if(typeof(myWishlist.list[i]) != "undefined") {
-      console.log("here");
       wishListIsEmpty = false;
       break;
     }
